@@ -1,0 +1,17 @@
+
+16
+down vote
+If you just want the background of the element to extend across the whole page this can also be achieved with negative margins.
+
+In a nutshell (correction from comment):
+
+.bleed {
+padding-left: 3000px;
+margin-left: -3000px;
+padding-right: 3000px;
+margin-right: -3000px;
+}
+That gives you horizontal scroll bars which you remove with:
+
+body {overflow-x: hidden; }
+There is a guide at http://www.sitepoint.com/css-extend-full-width-bars/. It might be more semantic to do this with psuedo elements: http://css-tricks.com/full-browser-width-bars/
